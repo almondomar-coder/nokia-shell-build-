@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  
+  --color-noka-dark: #121212;
+  --color-noka-gray: #1E1E1E;
+  --color-noka-gold: #D4AF37;
+  --color-noka-gold-hover: #F2CA47;
+}
+
+@layer base {
+  body {
+    @apply bg-noka-dark text-white font-sans antialiased overflow-x-hidden;
+  }
+}
+
+.glass-panel {
+  @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl;
+}
+
+.golden-text {
+  @apply bg-gradient-to-r from-noka-gold to-[#FFE885] bg-clip-text text-transparent;
+}
+
+::selection {
+  @apply bg-noka-gold/30 text-white;
+}
